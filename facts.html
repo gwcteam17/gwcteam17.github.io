@@ -22,19 +22,29 @@
 
     <div class = "col-md-4" div id = "smallRow">
       <h3>Trending</h3>
-
+      <li>North Korea</li>
       <hr>
       <h3>Receipts</h3>
     </div>
 
+    <p id="trend"></p>
+
     <div class = "col-md-8" div id = "bigRow">
       <h3>Trend Info</h3>
-      <form method="get" action="http://www.google.com/search"> <input type="text" name="q" size="31" maxlength="255" value="" /> <input type="submit" value="Google Search" /></form>
-      <br>
-      <form method="get" action="https://en.wikipedia.org/w/index.php">
-      <input type="text" name="search">
-      <input type="submit" value="Wikipedia Search">
-</form>
+
+      <script>
+        (function() {
+          var cx = '004319334939726450445:3_lqc8jshws';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+      </script>
+      <gcse:search></gcse:search>
+
   </div>
 </div>
 </body>
