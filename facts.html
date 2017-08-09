@@ -12,7 +12,6 @@
     #smallRow {border:solid grey 1px;
                 }
     div.row {padding-top:30px;
-
             }
   </style>
 </head>
@@ -23,14 +22,19 @@
 
     <div class = "col-md-4" div id = "smallRow">
       <h3>Trending</h3>
+
       <hr>
       <h3>Receipts</h3>
     </div>
 
     <div class = "col-md-8" div id = "bigRow">
       <h3>Trend Info</h3>
-    </div>
-
+      <form method="get" action="http://www.google.com/search"> <input type="text" name="q" size="31" maxlength="255" value="" /> <input type="submit" value="Google Search" /></form>
+      <br>
+      <form method="get" action="https://en.wikipedia.org/w/index.php">
+      <input type="text" name="search">
+      <input type="submit" value="Wikipedia Search">
+</form>
   </div>
 </div>
 </body>
