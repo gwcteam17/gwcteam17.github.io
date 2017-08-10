@@ -38,6 +38,13 @@ h3{
   color: inherit;
 }
 
+p { text-align: center;
+    padding-top:60px;
+    padding-left:70px;
+    padding-right:70px;
+    padding-bottom:30px;
+  }
+
 div.tab button {
     background-color: inherit;
     float: left;
@@ -112,13 +119,18 @@ div.tab button.active {
         }
 
 .container {
-            width:100%;
+            width:90%;
+            align-content: center;
+            padding-top: 5px;
+            padding-bottom:5px;
                   }
 .container .header {
-            border-radius: 10px;
-            background: url(http://www.w3schools.com/css/klematis.jpg) repeat;
-            opacity: 0.5;
-            color:white;
+            border-radius: 5px;
+            background: url(https://image.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg) repeat;
+            opacity: 0.4;
+            color:black;
+            font-size: 18px;
+            font-weight:bold;
             text-align: center;
             padding-top:20px;
             padding-bottom:20px;
@@ -205,10 +217,10 @@ function showDivs(n) {
 </head>
 <!--End of carousel and header tags-->
 
-<p>The most recent and unbiased news we can provide are here. Without need of
-  subscription or the bother of ads. Other sources, including those with known
-  party affiliations are located under their respective tabs below. Click on <thead>
-  tab to access them.</p>
+<p>Here you can find a collection of reputable news sources to get every
+  side of every story. We emphasize the sources without party affiliations
+  for credibility, but include biased sources under tabs below. Click on
+  the tabs to expand and collapse them.</p>
 
 <!-- start of actual news; row 1 -->
   <div class="row">
@@ -361,7 +373,7 @@ function showDivs(n) {
 
 <!--Row 2: Neutral and credible sources -->
 <div class="container">
-  <div class="header"><span>Expand</span> </div>
+  <div class="header"><span>Collapse</span> </div>
     <div class="row">
       <div class="content">
 <!-- start of first column-->
@@ -521,7 +533,7 @@ function showDivs(n) {
 
 <!--Row 3: Left Wing Sources -->
 <div class="container">
-  <div class="header"><span>Expand</span> </div>
+  <div class="header"><span>Collapse</span> </div>
     <div class="row">
       <div class="content">
 <!-- start of first column-->
@@ -631,7 +643,7 @@ function showDivs(n) {
 
 <!--Row 4: Right Wing Sources -->
 <div class="container">
-  <div class="header"><span>Expand</span> </div>
+  <div class="header"><span>Collapse</span> </div>
     <div class="row">
       <div class="content">
 <!-- start of first column-->
