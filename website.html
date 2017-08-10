@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
   <h1>TBD</h1>
   <p>Enter Content Here.</p>
@@ -45,6 +46,10 @@ div.tab button.active {
     border: 1px solid #ccc;
     border-top: none;
 }
+
+div.row {
+
+          }
 </style>
 </head>
 
@@ -57,7 +62,7 @@ div.tab button.active {
 
 <div id="Facts" class="tabcontent">
   <h3>Facts</h3>
-  <p>Reciepts.</p>
+  <p>Receipts.</p>
 </div>
 
 <div id="Profiles" class="tabcontent">
@@ -116,14 +121,9 @@ function showDivs(n) {
 }
 </script>
 
-<div class = container>
-
+<!-- start of actual news -->
   <div class="row">
-    <div class="col-md-4"><h1>news!</h1></div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4"><h3>Google News: Politics</h3>
       <!-- start sw-rss-feed code -->
       <script type="text/javascript">
       <!--
@@ -135,7 +135,7 @@ function showDivs(n) {
       rssfeed_scroll_step="6";
       rssfeed_scroll_bar="off";
       rssfeed_target="_blank";
-      rssfeed_font_size="20";
+      rssfeed_font_size="18";
       rssfeed_font_face="cambria";
       rssfeed_border="on";
       rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
@@ -170,7 +170,7 @@ function showDivs(n) {
       <div style="text-align:right; width:230px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
       <!-- end sw-rss-feed code -->
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4"><h3>ABC News</h3>
       <!-- start sw-rss-feed code -->
       <script type="text/javascript">
       <!--
@@ -182,7 +182,7 @@ function showDivs(n) {
       rssfeed_scroll_step="6";
       rssfeed_scroll_bar="off";
       rssfeed_target="_blank";
-      rssfeed_font_size="12";
+      rssfeed_font_size="18";
       rssfeed_font_face="cambria";
       rssfeed_border="on";
       rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
@@ -217,7 +217,7 @@ function showDivs(n) {
       <div style="text-align:right; width:400px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
       <!-- end sw-rss-feed code -->
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4"><h3>USA Today</h3>
       <!-- start sw-rss-feed code -->
       <script type="text/javascript">
       <!--
@@ -229,7 +229,7 @@ function showDivs(n) {
       rssfeed_scroll_step="6";
       rssfeed_scroll_bar="off";
       rssfeed_target="_blank";
-      rssfeed_font_size="12";
+      rssfeed_font_size="18";
       rssfeed_font_face="cambria";
       rssfeed_border="on";
       rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
@@ -266,6 +266,45 @@ function showDivs(n) {
     </div>
   </div>
 
+</div>
+
+<div class="container">
+  <div class="header"><span>Expand</span>
+    <div class="row">
+<!--start of first column-->
+      <div class="col-md-6">
+        <div class="content">
+          <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump">Tweets by Donald Trump</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></script>
+        </div>
+      </div>
+<!--end of first column -->
+<!--start of second column-->
+      <div class="col-md-6">
+        <div class="content">
+          <a class="twitter-timeline" data-lang="en" href="https://twitter.com/iticsPoll">Poll-tics</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+<!--end of second column-->
+    </div>
+  </div>
+<script>
+  $(".header").click(function () {
+
+      $header = $(this);
+      //getting the next element
+      $content = $header.next();
+      //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+      $content.slideToggle(500, function () {
+          //execute this after slideToggle is done
+          //change text of header based on visibility of content div
+          $header.text(function () {
+              //change text based on condition
+              return $content.is(":visible") ? "Collapse" : "Expand";
+          });
+      });
+
+  });
+</script>
 </div>
 
 </body>
