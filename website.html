@@ -47,8 +47,13 @@ div.tab button.active {
     border-top: none;
 }
 
-div.row {
-
+.container {
+    width:100%;
+          }
+.container .header {
+    border-radius: 10px;
+    background: url(http://www.w3schools.com/css/klematis.jpg) repeat;
+    color:white;
           }
 </style>
 </head>
@@ -269,19 +274,23 @@ function showDivs(n) {
 </div>
 
 <div class="container">
-  <div class="header"><span>Tweets</span> </div>
+  <div class="header"><span>Expand</span> </div>
     <div class="row">
-<!--start of first column-->
       <div class="content">
-        <div class="col-md-6">
+<!--start of first column-->
+        <div class="col-md-4">
           <a class="twitter-timeline" href="https://twitter.com/realDonaldTrump">Tweets by Donald Trump</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></script>
         </div>
 <!--end of first column -->
 <!--start of second column-->
-        <div class="col-md-6">
+        <div class="col-md-4">
           <a class="twitter-timeline" data-lang="en" href="https://twitter.com/iticsPoll">Poll-tics</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 <!--end of second column-->
+<!--start of third column-->
+        <div class="col-md-4">
+        </div>
+<!--end of third column-->
     </div>
   </div>
 </div>
