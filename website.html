@@ -118,6 +118,9 @@ div.tab button.active {
             border: 1px solid #ccc;
             border-top: none;
         }
+#firstRow { align-content: center;
+            width:90%;
+}
 
 .container {
             width:90%;
@@ -139,6 +142,20 @@ div.tab button.active {
 footer {
             padding: 40px;
                   }
+.sidenav {
+            height:100%;
+            width:0;
+            position: fixed;
+            z-index:1;
+            top:0;
+            left:0;
+            background-color: #ccc;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            text-align: center;
+}
+
 </style>
 
   <h1>TBD</h1>
@@ -146,6 +163,22 @@ footer {
 </head>
 
 <body>
+<!-- Sidebar for the poll-itics-->
+<div id="sidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!--twitter widget goes here-->
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Take a poll!!</span>
+<script>
+function openNav() {
+    document.getElementById("sidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+}
+</script>
+
 <!--This is the menu at the top of the site -->
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'Facts')">Facts</button>
@@ -225,7 +258,7 @@ function showDivs(n) {
 
 <!-- start of actual news; row 1 -->
   <div class="row">
-  <div id = "firstRow"
+  <div id = "firstRow">
     <div class="col-md-4"><h3>Politico</h3>
       <!--Politico-->
       <!-- start sw-rss-feed code -->
