@@ -5,6 +5,7 @@ a{
 }
 
 h1{
+  padding-top:30px;
   color: #2a2818;
   font-size: 400%;
   text-decoration: none;
@@ -22,6 +23,13 @@ h3{
   font-style: italic;
   color: inherit;
 }
+
+p { text-align: center;
+    padding-top:60px;
+    padding-left:70px;
+    padding-right:70px;
+    padding-bottom:30px;
+  }
 
 div.tab button {
     background-color: inherit;
@@ -97,13 +105,22 @@ div.tab button.active {
         }
 
 .container {
-            width:100%;
+            width:90%;
+            align-content: center;
+            padding-top: 5px;
+            padding-bottom:5px;
                   }
 .container .header {
-            border-radius: 10px;
-            background: url(http://www.w3schools.com/css/klematis.jpg) repeat;
-            color:white;
+            border-radius: 5px;
+            background: url(https://image.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg) repeat;
+            opacity: 0.4;
+            color:black;
+            font-size: 18px;
+            font-weight:bold;
             text-align: center;
             padding-top:20px;
             padding-bottom:20px;
+                  }
+footer {
+            padding: 40px;
                   }
