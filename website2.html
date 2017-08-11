@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Girls Who Code Final Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel = "stylesheet"
+  type = "text/css"
+  href = "overall.css" />
+<!--The css is still included in this file for testing purposes-->
+<style>a{
+  color: #15c;
+  font-weight: 300;
+  text-decoration: none;
+}
+h1{
+  padding-top:30px;
+  color: #2a2818;
+  font-size: 400%;
+  text-decoration: none;
+  text-align: center;
+  font-style: italic;
+}
+h2{
+  text-align: center;
+  font-style: italic;
+  color: inherit
+}
+h3{
+  text-align: center;
+  font-style: italic;
+  color: inherit;
+}
+p { text-align: center;
+    padding-top:60px;
+    padding-left:70px;
+    padding-right:70px;
+    padding-bottom:30px;
+  }
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.75s;
+    font-size: 18px;
+    font-style: italic;
+}
+.tabcontent {
+    display: none;
+    padding: 20px 50px;
+    border: 5px solid #ccc;
+    border-top: none;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background: #ebeef2;
+}
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: none;
+    background-color: #d6d6db;
+}
+div.tab button:hover {
+    background-color: #818884;
+}
+div.tab button.active {
+    background-color: #6e7690;
+}
+div.row {padding-top:30px;
+        }
+body {font-family: "Lato", sans-serif;}
+        /* Style the tab */
+div.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        /* Style the buttons inside the tab */
+div.tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        /* Change background color of buttons on hover */
+div.tab button:hover {
+            background-color: #ddd;
+        }
+        /* Create an active/current tablink class */
+div.tab button.active {
+            background-color: #ccc;
+        }
+        /* Style the tab content */
+.tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+#firstRow { align-content: center;
+            width:90%;
+}
+.container {
+            width:90%;
+            align-content: center;
+            padding-top: 5px;
+            padding-bottom:5px;
+                  }
+.container .header {
+            border-radius: 5px;
+            background: url(https://image.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg) repeat;
+            opacity: 0.4;
+            color:black;
+            font-size: 18px;
+            font-weight:bold;
+            text-align: center;
+            padding-top:20px;
+            padding-bottom:20px;
+                  }
+footer {
+            padding: 40px;
+                  }
+.sidenav {
+            height:100%;
+            width:0;
+            position: fixed;
+            z-index:1;
+            top:0;
+            left:0;
+            background-color: #ccc;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 10px;
+            text-align: center;
+}
+.closebtn {
+            height: 40px;
+            width:40px;
+            z-index:2;
+            float: right;
+            font-size: 24px;
+            color: white;
+            margin: 5px;
+            }
+#widget   {padding-top: 60px;
+           margin-top: 30px;
+            }
+</style>
+
+  <h1>TBD</h1>
+  <p>Enter Content Here.</p>
+</head>
+
+<body>
+
+<!--This is the menu at the top of the site -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Facts')">Facts</button>
+  <button class="tablinks" onclick="openCity(event, 'Profiles')">Profiles</button>
+  <button class="tablinks" onclick="openCity(event, 'Poll-itics')">Poll-itics</button>
+</div>
+
+<div id="Facts" class="tabcontent">
+  <h3>Facts</h3>
+  <p>Receipts.</p>
+</div>
+
+<div id="Profiles" class="tabcontent">
+  <h3>Profiles</h3>
+  <p>Leaders.</p>
+</div>
+
+<div id="Poll-itics" class="tabcontent">
+  <h3>Poll-itics</h3>
+  <p>Vote.</p>
+  <!-- Sidebar for the poll-itics-->
+  <div id="sidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--twitter widget goes here-->
+    <a class="twitter-timeline" a id ="widget" data-lang="en" href="https://twitter.com/iticsPoll">Poll-tics</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Take a poll!!</span>
+  <script>
+  function openNav() {
+      document.getElementById("sidenav").style.width = "40%";
+  }
+  function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+  }
+  </script>
+</div>
+
+
+<script>
+function openCity(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<!--End of menu and beginning of carousel-->
+
+<h2 class="w3-center">News!</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="picture1.jpg" style="width:100%">
+  <img class="mySlides" src="picture2.png" style="width:100%">
+  <img class="mySlides" src="picture3.jpg" style="width:100%">
+  <img class="mySlides" src="picture4.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</head>
+<!--End of carousel and header tags-->
+
+<p>Here you can find a collection of reputable news sources to get every
+  side of every story. We emphasize the sources without party affiliations
+  for credibility, but include biased sources under tabs below. Click on
+  the tabs to expand and collapse them.</p>
+
+<!-- start of actual news; row 1 -->
+  <div class="row">
+  <div id = "firstRow">
+    <div class="col-md-4"><h3>Politico</h3>
+      <!--Politico-->
+      <!-- start sw-rss-feed code -->
+      <script type="text/javascript">
+      <!--
+      rssfeed_url = new Array();
+      rssfeed_url[0]="http://www.politico.com/rss/politics08.xml";
+      rssfeed_frame_width="300";
+      rssfeed_frame_height="450";
+      rssfeed_scroll="on";
+      rssfeed_scroll_step="6";
+      rssfeed_scroll_bar="off";
+      rssfeed_target="_blank";
+      rssfeed_font_size="12";
+      rssfeed_font_face="";
+      rssfeed_border="on";
+      rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+      rssfeed_title="on";
+      rssfeed_title_name="";
+      rssfeed_title_bgcolor="#3366ff";
+      rssfeed_title_color="#fff";
+      rssfeed_title_bgimage="";
+      rssfeed_footer="off";
+      rssfeed_footer_name="rss feed";
+      rssfeed_footer_bgcolor="#fff";
+      rssfeed_footer_color="#333";
+      rssfeed_footer_bgimage="";
+      rssfeed_item_title_length="50";
+      rssfeed_item_title_color="#666";
+      rssfeed_item_bgcolor="#fff";
+      rssfeed_item_bgimage="";
+      rssfeed_item_border_bottom="on";
+      rssfeed_item_source_icon="off";
+      rssfeed_item_date="off";
+      rssfeed_item_description="on";
+      rssfeed_item_description_length="120";
+      rssfeed_item_description_color="#666";
+      rssfeed_item_description_link_color="#333";
+      rssfeed_item_description_tag="off";
+      rssfeed_no_items="0";
+      rssfeed_cache = "04f0ad29e01750601acc937b75035ee8";
+        //-->
+        </script>
+        <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+        <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+        <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+        <!-- end sw-rss-feed code -->
+    </div>
+  </div>
+    <div class="col-md-4"><h3>Associated Press</h3>
+      <!--Associated Press-->
+      <!-- start sw-rss-feed code -->
+      <script type="text/javascript">
+      <!--
+      rssfeed_url = new Array();
+      rssfeed_url[0]="http://hosted.ap.org/lineups/POLITICSHEADS.rss?SITE=AP&SECTION=HOME";
+      rssfeed_frame_width="300";
+      rssfeed_frame_height="450";
+      rssfeed_scroll="on";
+      rssfeed_scroll_step="6";
+      rssfeed_scroll_bar="off";
+      rssfeed_target="_blank";
+      rssfeed_font_size="12";
+      rssfeed_font_face="";
+      rssfeed_border="on";
+      rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+      rssfeed_title="on";
+      rssfeed_title_name="";
+      rssfeed_title_bgcolor="#3366ff";
+      rssfeed_title_color="#fff";
+      rssfeed_title_bgimage="";
+      rssfeed_footer="off";
+      rssfeed_footer_name="rss feed";
+      rssfeed_footer_bgcolor="#fff";
+      rssfeed_footer_color="#333";
+      rssfeed_footer_bgimage="";
+      rssfeed_item_title_length="50";
+      rssfeed_item_title_color="#666";
+      rssfeed_item_bgcolor="#fff";
+      rssfeed_item_bgimage="";
+      rssfeed_item_border_bottom="on";
+      rssfeed_item_source_icon="off";
+      rssfeed_item_date="off";
+      rssfeed_item_description="on";
+      rssfeed_item_description_length="120";
+      rssfeed_item_description_color="#666";
+      rssfeed_item_description_link_color="#333";
+      rssfeed_item_description_tag="off";
+      rssfeed_no_items="0";
+      rssfeed_cache = "c765cd71e43d01631691e538626e9ee8";
+      //-->
+      </script>
+      <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+      <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+      <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+      <!-- end sw-rss-feed code -->
+    </div>
+    <div class="col-md-4"><h3>Reuters</h3>
+      <!--Reuters-->
+      <!-- start sw-rss-feed code -->
+      <script type="text/javascript">
+      <!--
+      rssfeed_url = new Array();
+      rssfeed_url[0]="http://feeds.reuters.com/Reuters/PoliticsNews";
+      rssfeed_frame_width="300";
+      rssfeed_frame_height="450";
+      rssfeed_scroll="on";
+      rssfeed_scroll_step="6";
+      rssfeed_scroll_bar="off";
+      rssfeed_target="_blank";
+      rssfeed_font_size="12";
+      rssfeed_font_face="";
+      rssfeed_border="on";
+      rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+      rssfeed_title="on";
+      rssfeed_title_name="";
+      rssfeed_title_bgcolor="#3366ff";
+      rssfeed_title_color="#fff";
+      rssfeed_title_bgimage="";
+      rssfeed_footer="off";
+      rssfeed_footer_name="rss feed";
+      rssfeed_footer_bgcolor="#fff";
+      rssfeed_footer_color="#333";
+      rssfeed_footer_bgimage="";
+      rssfeed_item_title_length="50";
+      rssfeed_item_title_color="#666";
+      rssfeed_item_bgcolor="#fff";
+      rssfeed_item_bgimage="";
+      rssfeed_item_border_bottom="on";
+      rssfeed_item_source_icon="off";
+      rssfeed_item_date="off";
+      rssfeed_item_description="on";
+      rssfeed_item_description_length="120";
+      rssfeed_item_description_color="#666";
+      rssfeed_item_description_link_color="#333";
+      rssfeed_item_description_tag="off";
+      rssfeed_no_items="0";
+      rssfeed_cache = "c765cd71e43d01631691e538626e9ee8";
+      //-->
+      </script>
+      <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+      <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+      <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+      <!-- end sw-rss-feed code -->
+    </div>
+  </div>
+</div>
+
+<!--Row 2: Neutral and credible sources -->
+<div class="container">
+  <div class="header"><span>Collapse</span> </div>
+    <div class="row">
+      <div class="content">
+<!-- start of first column-->
+        <div class="col-md-4"><h3>ABC News</h3>
+          <!--ABC News-->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="http://abcnews.go.com/abcnews/politicsheadlines";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="12";
+          rssfeed_font_face="cambria";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "f855d7a6c9811f44772cd47f60526719";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:400px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+        </div>
+<!--end of first column -->
+<!--start of second column-->
+        <div class="col-md-4"><h3>Google News</h3>
+          <!--Google News-->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="https://news.google.com/news/rss/headlines/section/q/us%20politics/us%20politics?ned=us&hl=en";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="20";
+          rssfeed_font_face="cambria";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "f855d7a6c9811f44772cd47f60526719";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:230px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+        </div>
+<!--end of second column-->
+<!--start of third column-->
+        <div class="col-md-4"><h3>USA Today News</h3>
+          <!--USA Today News-->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="http://rssfeeds.usatoday.com/usatodaycomwashington-topstories&x=1";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="12";
+          rssfeed_font_face="cambria";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "f855d7a6c9811f44772cd47f60526719";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:400px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+
+        </div>
+<!--end of third column-->
+    </div>
+  </div>
+</div>
+
+<!--Row 3: Left Wing Sources -->
+<div class="container">
+  <div class="header"><span>Collapse</span> </div>
+    <div class="row">
+      <div class="content">
+<!-- start of first column-->
+        <div class="col-md-6"><h3>CNN News</h3>
+          <!--CNN News -->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="http://rss.cnn.com/rss/cnn_allpolitics.rss";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="12";
+          rssfeed_font_face="";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "c765cd71e43d01631691e538626e9ee8";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+
+        </div>
+<!--end of first column -->
+<!--start of second column-->
+        <div class="col-md-4"><h3>MSNBC</h3>
+          <!--MSNBC News-->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="https://www.cnbc.com/id/10000113/device/rss/rss.html";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="12";
+          rssfeed_font_face="";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "c765cd71e43d01631691e538626e9ee8";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+        </div>
+<!--end of second column-->
+    </div>
+  </div>
+</div>
+
+<!--Row 4: Right Wing Sources -->
+<div class="container">
+  <div class="header"><span>Collapse</span> </div>
+    <div class="row">
+      <div class="content">
+<!-- start of first column-->
+        <div class="col-md-6"><h3>Fox News</h3>
+          <!--Fox News -->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="http://feeds.foxnews.com/foxnews/politics";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="12";
+          rssfeed_font_face="";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "c765cd71e43d01631691e538626e9ee8";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+
+
+        </div>
+<!--end of first column -->
+<!--start of second column-->
+        <div class="col-md-4"><h3>The White House</h3>
+          <!-- The White House -->
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="https://www.whitehouse.gov/blog-daily-listings-rss";
+          rssfeed_frame_width="300";
+          rssfeed_frame_height="450";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="6";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="12";
+          rssfeed_font_face="";
+          rssfeed_border="on";
+          rssfeed_css_url="https://feed.surfing-waves.com/css/style4.css";
+          rssfeed_title="on";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#3366ff";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#fff";
+          rssfeed_footer_color="#333";
+          rssfeed_footer_bgimage="";
+          rssfeed_item_title_length="50";
+          rssfeed_item_title_color="#666";
+          rssfeed_item_bgcolor="#fff";
+          rssfeed_item_bgimage="";
+          rssfeed_item_border_bottom="on";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="120";
+          rssfeed_item_description_color="#666";
+          rssfeed_item_description_link_color="#333";
+          rssfeed_item_description_tag="off";
+          rssfeed_no_items="0";
+          rssfeed_cache = "c765cd71e43d01631691e538626e9ee8";
+          //-->
+          </script>
+          <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:300px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#ccc;font-size:10px">feedwidget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#ccc;font-size:10px">Surfing Waves</a></div>
+          <!-- end sw-rss-feed code -->
+        </div>
+<!--end of second column-->
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".header").click(function () {
+      $header = $(this);
+      //getting the next element
+      $content = $header.next();
+      //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+      $content.slideToggle(500, function () {
+          //execute this after slideToggle is done
+          //change text of header based on visibility of content div
+          $header.text(function () {
+              //change text based on condition
+              return $content.is(":visible") ? "Collapse" : "Expand";
+          });
+      });
+  });
+</script>
+
+</body>
+<footer>
+<p>A collaboration among Girls Who Code students Ayni, Audri, Blaine, and Manvi</p>
+</footer>
+</html>
