@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>Girls Who Code Final Project</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="overall.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h2>Politician Profiles</h2>
+  <p>You can view information on politicians from the White House all the way to local government.</p>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'National')">National</button>
+    <button class="tablinks" onclick="openCity(event, 'State')">State</button>
+    <button class="tablinks" onclick="openCity(event, 'Local')">Local</button>
+  </div>
+  <script>
+  function openCity(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+  </script>
+
+  <div id="National" class="tabcontent">
+    <h2>National</h2>
+    <p>The White House Staff</p>
+    <div class="card">
+      <div class="container">
+        <h3>Schmonald Smrump</h3>
+        <p class="title">President of the United States</p>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+  </div>
+</div>
+
+  </div>
+
+  <div id="State" class="tabcontent">
+    <h3>State</h3>
+    <p>Washington State</p>
+  </div>
+
+  <div id="Local" class="tabcontent">
+    <h3>Local</h3>
+    <p>Local</p>
+  </div>
+
+</body>
+
+
+</html>
