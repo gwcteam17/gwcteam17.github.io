@@ -128,6 +128,7 @@ div.tab button.active {
             padding-top: 5px;
             padding-bottom:5px;
                   }
+
 .container .header {
             border-radius: 5px;
             background: url(https://image.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg) repeat;
@@ -152,9 +153,25 @@ footer {
             background-color: #ccc;
             overflow-x: hidden;
             transition: 0.5s;
-            padding-top: 60px;
+            padding-top: 10px;
             text-align: center;
 }
+
+.closebtn {
+            height: 15px;
+            width:15px;
+            background-color:white;
+            z-index:2;
+            float: right;
+            font-size: 24px;
+            color: #ccc
+            padding:10px;
+            margin: 5px;
+            }
+
+#widget   {padding-top: 60px;
+           margin-top: 30px;
+            }
 
 </style>
 
@@ -163,21 +180,6 @@ footer {
 </head>
 
 <body>
-<!-- Sidebar for the poll-itics-->
-<div id="sidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <!--twitter widget goes here-->
-</div>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Take a poll!!</span>
-<script>
-function openNav() {
-    document.getElementById("sidenav").style.width = "100%";
-}
-
-function closeNav() {
-    document.getElementById("sidenav").style.width = "0";
-}
-</script>
 
 <!--This is the menu at the top of the site -->
 <div class="tab">
@@ -199,7 +201,24 @@ function closeNav() {
 <div id="Poll-itics" class="tabcontent">
   <h3>Poll-itics</h3>
   <p>Vote.</p>
+  <!-- Sidebar for the poll-itics-->
+  <div id="sidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--twitter widget goes here-->
+    <a class="twitter-timeline" a id ="widget" data-lang="en" href="https://twitter.com/iticsPoll">Poll-tics</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Take a poll!!</span>
+  <script>
+  function openNav() {
+      document.getElementById("sidenav").style.width = "40%";
+  }
+
+  function closeNav() {
+      document.getElementById("sidenav").style.width = "0";
+  }
+  </script>
 </div>
+
 
 <script>
 function openCity(evt, tabName) {
