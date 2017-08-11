@@ -166,61 +166,56 @@ footer {
 
 <body>
 
-<!--This is the menu at the top of the site -->
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Facts')">Facts</button>
-  <button class="tablinks" onclick="openCity(event, 'Profiles')">Profiles</button>
-  <button class="tablinks" onclick="openCity(event, 'Poll-itics')">Poll-itics</button>
-</div>
-
-<div id="Facts" class="tabcontent">
-  <h3>Facts</h3>
-  <p>Receipts.</p>
-</div>
-
-<div id="Profiles" class="tabcontent">
-  <h3>Profiles</h3>
-  <p>Leaders.</p>
-</div>
-
-<div id="Poll-itics" class="tabcontent">
-  <h3>Poll-itics</h3>
-  <p>Vote.</p>
-  <!-- Sidebar for the poll-itics-->
-  <div id="sidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <!--twitter widget goes here-->
-    <a class="twitter-timeline" a id ="widget" data-lang="en" href="https://twitter.com/iticsPoll">Poll-tics</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <!--This is the menu at the top of the site -->
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Facts')">Facts</button>
+    <button class="tablinks" onclick="openCity(event, 'Profiles')">Profiles</button>
+    <button class="tablinks" onclick="openNav(event, 'Poll-itics')">Poll-itics</button>
   </div>
-  <span style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; Take a poll!!</span>
+
+  <div id="Facts" class="tabcontent">
+    <h3>Facts</h3>
+    <p>Receipts.</p>
+  </div>
+
+  <div id="Profiles" class="tabcontent">
+    <h3>Profiles</h3>
+    <p>Leaders.</p>
+  </div>
+
+    <!-- Sidebar for the poll-itics-->
+    <div id="sidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--twitter widget goes here-->
+      <a class="twitter-timeline" a id ="widget" data-lang="en" href="https://twitter.com/iticsPoll">Poll-tics</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <script>
+    function openNav() {
+        document.getElementById("sidenav").style.width = "40%";
+    }
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+    }
+    </script>
+  </div>
+
+  <!-- OpenCity function -->
   <script>
-  function openNav() {
-      document.getElementById("sidenav").style.width = "40%";
-  }
-  function closeNav() {
-      document.getElementById("sidenav").style.width = "0";
+  function openCity(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
   }
   </script>
-</div>
-
-
-<script>
-function openCity(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
-
-<!--End of menu and beginning of carousel-->
+<!--End of menu and start of carousel-->
 
 <h2 class="w3-center">News!</h2>
 
