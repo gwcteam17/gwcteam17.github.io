@@ -189,9 +189,17 @@ footer {
 
   <!--This is the menu at the top of the site -->
   <div class="tab">
-    <button class="tablinks" <a href ="facts.html">Facts</a></button>
-    <button class="tablinks" <a href = "profiles.html">Profiles</a></button>
+    <button class="tablinks" onclick="openCity(event, 'Facts')">Facts</button>
+    <button class="tablinks" onclick="openCity(event, 'Profiles')">Profiles</button>
     <button class="tablinks" onclick="openNav(event, 'Poll-itics')">Poll-itics</button>
+  </div>
+
+  <div id="Facts" class="tabcontent">
+    <a href ="facts.html">facts</a>
+  </div>
+
+  <div id="Profiles" class="tabcontent">
+    <a href = "profiles.html">profiles</a>
   </div>
 
     <!-- Sidebar for the poll-itics-->
@@ -209,6 +217,24 @@ footer {
     }
     </script>
   </div>
+
+  <!-- OpenCity function -->
+  <script>
+  function openCity(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+  </script>
+
 
 <!--End of menu and start of carousel-->
 <h2 class="w3-center">News!</h2>
