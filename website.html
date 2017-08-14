@@ -13,14 +13,18 @@
   type = "text/css"
   href = "overall.css" />
 <!--The css is still included in this file for testing purposes-->
-<style>a{
-  color: #15c;
+<style>
+a{
+  color: #84c1c8;
   font-weight: 300;
   text-decoration: none;
 }
+a:hover {color: #56aab3;
+
+}
 h1{
   padding-top:30px;
-  color: #2a2818;
+  color: #56aab3;
   font-size: 400%;
   text-decoration: none;
   text-align: center;
@@ -29,7 +33,7 @@ h1{
 h2{
   text-align: center;
   font-style: italic;
-  color: inherit
+  color: #56aab3;
 }
 h3{
   text-align: center;
@@ -43,7 +47,10 @@ p { text-align: center;
     padding-bottom:30px;
     width:40%
     float: center;
+    color:000406;
+    font-size: 14px;
   }
+}
 div.tab button {
     background-color: inherit;
     float: left;
@@ -63,13 +70,13 @@ div.tab button {
 }
 body {
   font-family: "Lato", sans-serif;
-  background: #ebeef2;
+  background: #f2f2f2;
 }
 /* Style the tab */
 div.tab {
     overflow: hidden;
     border: none;
-    background-color: #d6d6db;
+    background-color: #e2e9e9;
 }
 div.tab button:hover {
     background-color: #818884;
@@ -84,7 +91,7 @@ body {font-family: "Lato", sans-serif;}
 div.tab {
             overflow: hidden;
             border: 1px solid #ccc;
-            background-color: #f1f1f1;
+            background-color: white;
         }
         /* Style the buttons inside the tab */
 div.tab button {
@@ -112,9 +119,7 @@ div.tab button.active {
             border: 1px solid #ccc;
             border-top: none;
         }
-#firstRow { align-content: center;
-            width:90%;
-}
+
 .container {
             width:90%;
             align-content: center;
@@ -123,7 +128,8 @@ div.tab button.active {
                   }
 .container .header {
             border-radius: 5px;
-            background: url(https://image.freepik.com/free-vector/hexagonal-pattern_1051-833.jpg) repeat;
+            border: 1px solid #ccc;
+            background-color:white;
             opacity: 0.4;
             color:black;
             font-size: 18px;
@@ -132,6 +138,9 @@ div.tab button.active {
             padding-top:10px;
             padding-bottom:10px;
                   }
+.container .header:hover {
+            color:#56aab3;
+}
 footer {
             padding: 40px;
                   }
@@ -142,7 +151,7 @@ footer {
             z-index:1;
             top:0;
             left:0;
-            background-color: #ccc;
+            background-color:#84c1c8;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 10px;
@@ -166,6 +175,9 @@ footer {
 .centerBlock {
   display: table;
   margin: auto;
+  background-color: white;
+  font-size: 18px;
+
 }
 </style>
 
@@ -224,44 +236,51 @@ footer {
       evt.currentTarget.className += " active";
   }
   </script>
-<!--End of menu and start of carousel-->
 
+
+<!--End of menu and start of carousel-->
 <h2 class="w3-center">News!</h2>
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="picture1.jpg" height:"250" width="60%">
-  <img class="mySlides" src="picture2.png" height:"250" width="60%">
-  <img class="mySlides" src="picture3.jpg" height:"250" width="60%">
-  <img class="mySlides" src="picture4.jpg" height:"250" width="60%">
+<div class = "container" id = "topbar">
+  <div class = "row">
+    <div class = "col-md-8">
+      <div class="w3-content w3-display-container">
+        <img class="mySlides" src="picture1.jpg" height:"250" width="60%">
+        <img class="mySlides" src="picture2.png" height:"250" width="60%">
+        <img class="mySlides" src="picture3.jpg" height:"250" width="60%">
+        <img class="mySlides" src="picture4.jpg" height:"250" width="60%">
 
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+      </script>
+    </div>
+      <!--End of carousel and header tags-->
+    <div class = "col-md-4">
+      <p>Here you can find a collection of reputable news sources to get every
+        side of every story. We emphasize the sources without party affiliations
+        for credibility, but include biased sources under tabs below. Click on
+        the tabs to expand and collapse them.</p>
+    </div>
+  </div>
 </div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-</script>
-</head>
-<!--End of carousel and header tags-->
-
-<p>Here you can find a collection of reputable news sources to get every
-  side of every story. We emphasize the sources without party affiliations
-  for credibility, but include biased sources under tabs below. Click on
-  the tabs to expand and collapse them.</p>
 
 <!--Start of news-->
 <!--Row 1: International and neutral sources -->
