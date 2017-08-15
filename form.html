@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Girls Who Code Final Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="overall.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    #smallRow {border:solid grey 1px;
+                }
+    div.row {padding-top:30px;
+            }
+  </style>
+</head>
+<body>
+
+<div class = container>
+  <div class = "row">
+
+    <div class = "col-md-4" div id = "smallRow">
+      <h3>Trending</h3>
+      <li>North Korea</li>
+      <hr>
+      <h3>Receipts</h3>
+      <form>
+        <p>Title of your receipt<p style="color:red;">*</p></p>
+        <input type="text" name="title" required></input><br>
+        <p>Political Scale<p style="color:red;">*</p></p>
+        <input type="radio" name="Global" required>Global</input><br>
+        <input type="radio" name="National">National</input><br>
+        <input type="radio" name="State">State</input><br>
+        <input type="radio" name="Local">Local</input><br>
+        <input type="radio" name="otherbox">Other: <input type="text"></input></input><br><br>
+        <p>What's your evidence? Enter a url below<p style="color:red;">*</p></p>
+        <input type="url" name="url" required></input><br><br>
+        <p>What's the context and what does this mean?<p style="color:red;">*</p></p>
+        <input type="text" name="analysis" size="70" required></input><br><br>
+        <p>Current date and time:<p style="color:red;">*</p></p>
+        <input type="datetime-local" name="date" required></input><br><br>
+        <input type="submit" value="Submit"></input>
+      </form>
+    </div>
+    <p id="trend"></p>
+
+    <div class = "col-md-8" div id = "bigRow">
+      <h3>Trend Info</h3>
+
+      <script>
+        (function() {
+          var cx = '004319334939726450445:3_lqc8jshws';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+          })();
+      </script>
+      <gcse:search></gcse:search>
+
+  </div>
+</div>
+</body>
+</html>
