@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Girls Who Code Final Project</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="overall.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<title>Girls Who Code Final Project</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel = "stylesheet"
+  type = "text/css"
+  href = "overall.css" />
   <style>
     #smallRow {border:solid grey 1px;
                 }
@@ -27,19 +31,19 @@
       <h3>Receipts</h3>
       <form action="backend.php">
         <p>Title of your receipt<p style="color:red;">*</p></p>
-        <input type="text" name="title" required></input><br>
+        <input type="text" name="title" ></input><br>
         <p>Political Scale<p style="color:red;">*</p></p>
-        <input type="radio" name="Global" required>Global</input><br>
+        <input type="radio" name="Global" >Global</input><br>
         <input type="radio" name="National">National</input><br>
         <input type="radio" name="State">State</input><br>
         <input type="radio" name="Local">Local</input><br>
         <input type="radio" name="otherbox">Other: <input type="text"></input></input><br><br>
         <p>What's your evidence? Enter a url below<p style="color:red;">*</p></p>
-        <input type="url" name="url" required></input><br><br>
+        <input type="url" name="url" ></input><br><br>
         <p>What's the context and what does this mean?<p style="color:red;">*</p></p>
-        <input type="text" name="analysis" size="70" required></input><br><br>
+        <input type="text" class="textbox" name="analysis" height="50" size="70" ></input><br><br>
         <p>Current date and time:<p style="color:red;">*</p></p>
-        <input type="datetime-local" name="date" required></input><br><br>
+        <input type="datetime-local" name="date" ></input><br><br>
         <input type="submit" value="Submit"></input>
       </form>
     </div>
